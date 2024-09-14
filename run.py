@@ -41,7 +41,7 @@ def player_ship_coordinate(player_board, occupied):
         try:
             row = int(input("Enter the row for Battleship: "))
             col = int(input("Enter the column for Battleship: "))
-            if 0 <= row < 10 and 0 <= 10 and (row, col) not in occupied:
+            if 0 <= row < 10 and 0 <= col < 10 and (row, col) not in occupied:
                 player_board[row][col] = "B"
                 occupied.add((row, col))
                 break
@@ -51,25 +51,23 @@ def player_ship_coordinate(player_board, occupied):
             print("Invalid Input. Please enter a valid number.")
 
     while True:
-            try:
-                row = int(input("Enter the row for Battleship: "))
-                col = int(input("Enter the column for Battleship: "))
-
-                if 0 <= row < 10 and 0 <= 10 and (row, col) not in occupied:
-                    player_board[row][col] = "C"
-                    occupied.add((row, col))
-                    break
-                else:
-                    print("Invalid coordinates. Please enter correct value.")
-            except ValueError:
-                print("Invalid Input. Please enter a valid number.")
+        try:
+            row = int(input("Enter the row for Battleship: "))
+            col = int(input("Enter the column for Battleship: "))
+            if 0 <= row < 10 and 0 <= col < 10 and (row, col) not in occupied:
+                player_board[row][col] = "C"
+                occupied.add((row, col))
+                break
+            else:
+                print("Invalid coordinates. Please enter correct value.")
+        except ValueError:
+            print("Invalid Input. Please enter a valid number.")
 
     while True:
         try:
             row = int(input("Enter the row for Battleship: "))
             col = int(input("Enter the column for Battleship: "))
-
-            if 0 <= row < 10 and 0 <= 10 and (row, col) not in occupied:
+            if 0 <= row < 10 and 0 <= col < 10 and (row, col) not in occupied:
                 player_board[row][col] = "F"
                 occupied.add((row, col))
                 break
@@ -82,8 +80,7 @@ def player_ship_coordinate(player_board, occupied):
         try:
             row = int(input("Enter the row for Battleship: "))
             col = int(input("Enter the column for Battleship: "))
-
-            if 0 <= row < 10 and 0 <= 10 and (row, col) not in occupied:
+            if 0 <= row < 10 and 0 <= col < 10 and (row, col) not in occupied:
                 player_board[row][col] = "A"
                 occupied.add((row, col))
                 break
@@ -96,7 +93,7 @@ def player_ship_coordinate(player_board, occupied):
         try:
             row = int(input("Enter the row for Battleship: "))
             col = int(input("Enter the column for Battleship: "))
-            if 0 <= row < 10 and 0 <= 10 and (row, col) not in occupied:
+            if 0 <= row < 10 and 0 <= col < 10 and (row, col) not in occupied:
                 player_board[row][col] = "S"
                 occupied.add((row, col))
                 break
@@ -181,4 +178,27 @@ def check_comp_hit(player_board):
             break
         if player_board[row][col] != "s":
             break
-    print("COmpter has selected coordinates", row, col)
+    print("Compter has selected coordinates", row, col)
+
+    if player_board[row][col] == "B":
+        player_board[row][col] = "b"
+        print("Player: Battleship been hit!")
+    elif player_board[row][col] == "C":
+        player_board[row][col] = "c"
+        print("Player: Cruiser been hit!")
+    elif player_board[row][col] == "F":
+        player_board[row][col] = "f"
+        print("Player: Frigate been hit!")
+        hit = 1
+    elif player_board[row][col] == "A":
+        player_board[row][col] = "a"
+        print("Player: Aircraft carrier been hit!")
+    elif player_board[row][col] == "S":
+        player_board[row][col] = "s"
+        print("Player: Sub been hit!")
+    else:
+        hit = 0
+        print("Missed me!")
+        player_board[row][col] = "*"
+
+    return hit
