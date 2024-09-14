@@ -31,3 +31,78 @@ def display_battlefield(board):
     """
     for row in board:
         print(" ".join(row))
+
+
+def player_ship_coordinate(player_board, occupied):
+    """
+    function for player placement ship
+    """
+    while True:
+        try:
+            row = int(input("Enter the row for Battleship: "))
+            col = int(input("Enter the column for Battleship: "))
+            if 0 <= row < 10 and 0 <= 10 and (row, col) not in occupied:
+                player_board[row][col] = "B"
+                occupied.add((row, col))
+                break
+            else:
+                print("Invalid coordinates. Please enter correct value.")
+        except ValueError:
+            print("Invalid Input. Please enter a valid number.")
+
+    while True:
+            try:
+                row = int(input("Enter the row for Battleship: "))
+                col = int(input("Enter the column for Battleship: "))
+
+                if 0 <= row < 10 and 0 <= 10 and (row, col) not in occupied:
+                    player_board[row][col] = "C"
+                    occupied.add((row, col))
+                    break
+                else:
+                    print("Invalid coordinates. Please enter correct value.")
+            except ValueError:
+                print("Invalid Input. Please enter a valid number.")
+
+    while True:
+        try:
+            row = int(input("Enter the row for Battleship: "))
+            col = int(input("Enter the column for Battleship: "))
+
+            if 0 <= row < 10 and 0 <= 10 and (row, col) not in occupied:
+                player_board[row][col] = "F"
+                occupied.add((row, col))
+                break
+            else:
+                print("Invalid coordinates. Please enter correct value.")
+        except ValueError:
+            print("Invalid Input. Please enter a valid number.")
+
+    while True:
+        try:
+            row = int(input("Enter the row for Battleship: "))
+            col = int(input("Enter the column for Battleship: "))
+
+            if 0 <= row < 10 and 0 <= 10 and (row, col) not in occupied:
+                player_board[row][col] = "A"
+                occupied.add((row, col))
+                break
+            else:
+                print("Invalid coordinates. Please enter correct value.")
+        except ValueError:
+            print("Invalid Input. Please enter a valid number.")
+
+    while True:
+        try:
+            row = int(input("Enter the row for Battleship: "))
+            col = int(input("Enter the column for Battleship: "))
+            if 0 <= row < 10 and 0 <= 10 and (row, col) not in occupied:
+                player_board[row][col] = "S"
+                occupied.add((row, col))
+                break
+            else:
+                print("Invalid coordinates. Please enter correct value.")
+        except ValueError:
+            print("Invalid Input. Please enter a valid number.")
+
+    return player_board, occupied
