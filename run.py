@@ -121,3 +121,38 @@ def comp_ship_coordinate(comp_board):
                 break
         
     return comp_board
+
+
+def check_player_hit(comp_board, dummy_board, user):
+    """
+    function for player hit or missed and enemy ship
+    """
+    print(user)
+    row = int(input("Enter your guess for row: "))
+    col = int(input("Enter your guess for col"))
+    hit = 1
+
+    if comp_board[row][col] == "B":
+        comp_board[row][col] = "b"
+        dummy_board[rol][col] = "X"
+        print("Computer: Battleship has been hit!")
+    elif comp_board[row][col] == "C":
+        comp_board[row][col] = "c"
+        dummy_board[row][col] = "X"
+        print("Computer: Cruiser has been hit!")
+    elif comp_board[row][col] == "F":
+        comp_board[row][col] = "f"
+        dummy_board[row][col] = "X"
+        print("Computer: Frigate has been hit!")
+    elif comp_board[row][col] == "A":
+        comp_board[row][col] = "a"
+        dummy_board[row][col] = "X"
+        print("Computer: Aircraft Carrier has been hit")
+    elif comp_board[row][col] == "S":
+        comp_board[row][col] = "s"
+        dummy_board[row][col] = "X"
+        print("Computer: Submarine has been hit")
+    else:
+        dummy_board[row][col] = "*"
+        hit = 0
+        print("Missed, try again")
