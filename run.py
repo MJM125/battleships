@@ -206,7 +206,7 @@ def check_comp_hit(player_board):
 
 if __name__ == "__main__":
 
-    user = get_username():
+        user = get_username()
 
         player_board = create_battlefield(map_size)
         comp_board = create_battlefield(map_size)
