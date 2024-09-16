@@ -52,8 +52,8 @@ def player_ship_coordinate(player_board, occupied):
 
     while True:
         try:
-            row = int(input("Enter the row for Battleship: "))
-            col = int(input("Enter the column for Battleship: "))
+            row = int(input("Enter the row for Cruiser: "))
+            col = int(input("Enter the column for Cruiser: "))
             if 0 <= row < 10 and 0 <= col < 10 and (row, col) not in occupied:
                 player_board[row][col] = "C"
                 occupied.add((row, col))
@@ -65,8 +65,8 @@ def player_ship_coordinate(player_board, occupied):
 
     while True:
         try:
-            row = int(input("Enter the row for Battleship: "))
-            col = int(input("Enter the column for Battleship: "))
+            row = int(input("Enter the row for Frigate: "))
+            col = int(input("Enter the column for Frigate: "))
             if 0 <= row < 10 and 0 <= col < 10 and (row, col) not in occupied:
                 player_board[row][col] = "F"
                 occupied.add((row, col))
@@ -78,8 +78,8 @@ def player_ship_coordinate(player_board, occupied):
 
     while True:
         try:
-            row = int(input("Enter the row for Battleship: "))
-            col = int(input("Enter the column for Battleship: "))
+            row = int(input("Enter the row for Aircraft Carrier: "))
+            col = int(input("Enter the column for Aircraft Carrier: "))
             if 0 <= row < 10 and 0 <= col < 10 and (row, col) not in occupied:
                 player_board[row][col] = "A"
                 occupied.add((row, col))
@@ -91,8 +91,8 @@ def player_ship_coordinate(player_board, occupied):
 
     while True:
         try:
-            row = int(input("Enter the row for Battleship: "))
-            col = int(input("Enter the column for Battleship: "))
+            row = int(input("Enter the row for Submarine: "))
+            col = int(input("Enter the column for Submarine: "))
             if 0 <= row < 10 and 0 <= col < 10 and (row, col) not in occupied:
                 player_board[row][col] = "S"
                 occupied.add((row, col))
