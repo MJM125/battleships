@@ -1,32 +1,21 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+##Battleships
 
-Welcome,
+This is a player vs computer game. Battleship is game where players or in this instance player and computer are given a number of battleships that they place down on a board. 
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **May 14, 2024**
 
-## Reminders
+![game of battleship](https://github.com/user-attachments/assets/45cf0c2e-3b8f-4ab4-8535-d4eae72c0ee9)
 
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
+##Known errors
+I tested the code on python linter which checks the code for any mistakes and blunders. On line 209 it says its over-indented, but when it is not over-intended and everything is all clear the game does not run and an error occurs. When it comes to guessing the coordinates of the enemies battleship. If you put in a key other then a number it will stop the game and you will have to run the programm again. 
 
-## Creating the Heroku app
+![error warning](https://github.com/user-attachments/assets/87902575-0db6-42d1-94b5-b2d82d8eea13)
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
 
-1. `heroku/python`
-2. `heroku/nodejs`
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+To be able to get access to the game through the link https://dashboard.heroku.com/apps/battle-ship/deploy/github you will need to create an account on heroku.
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
 
-Connect your GitHub repository and deploy as normal.
 
-## Constraints
+##Credits
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
----
-
-Happy coding!
+No externel code sources were used to develop this game of battleship.
