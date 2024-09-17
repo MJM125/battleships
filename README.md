@@ -12,7 +12,7 @@ I tested the code on python linter which checks the code for any mistakes and bl
 
 
 
-To be able to get access to the game through the link https://dashboard.heroku.com/apps/battle-ship/deploy/github you will need to create an account on heroku.
+To be able to get access to the game through the link https://battle-ship-daa27dfd8c96.herokuapp.com/ you will need to create an account on heroku.
 
 
 
